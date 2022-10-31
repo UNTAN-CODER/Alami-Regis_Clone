@@ -16,10 +16,10 @@ const indicatorStyles = {
   stepIndicatorLabelUnFinishedColor: "#ffffff",
 };
 
-// import { formStep } from "../jotai";
+import { formStep } from "../jotai";
 
 const FormStepIndicator = () => {
-  const [formStepVal, setFormStepVal] = useState(0);
+  const [formStepVal] = useAtom(formStep);
 
   return (
     <StepIndicator

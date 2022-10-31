@@ -18,7 +18,13 @@ import {
 } from "native-base";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
+import { useAtom, useSetAtom } from "jotai";
+
+import { formStep } from "../../jotai";
+
 export default function Step1() {
+  const setFormStepVal = useSetAtom(formStep);
+
   const [showPassword, setShowPassword] = useState(false);
   const [showPasswordConfirmation, setShowPasswordConfirmation] =
     useState(false);
@@ -392,7 +398,7 @@ export default function Step1() {
             <Button
               onPress={() => {
                 // handleSubmit();
-                // setFormStepVal(1);
+                setFormStepVal(1);
               }}
               borderRadius="full"
               bgColor="#ff8218"
