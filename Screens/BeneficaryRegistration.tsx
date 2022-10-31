@@ -10,6 +10,8 @@ import {
 } from "native-base";
 
 import Step1 from "./BeneficaryRegistrasion/Step1";
+import Step2 from "./BeneficaryRegistrasion/Step2";
+import Step3 from "./BeneficaryRegistrasion/Step3";
 import FormStepIndicator from "../components/FormStepIndicator";
 
 export default function BeneficaryRegistration() {
@@ -19,9 +21,9 @@ export default function BeneficaryRegistration() {
     if (formStepVal == 0) {
       return <Step1 />;
     } else if (formStepVal == 1) {
-      return <Step1 />;
+      return <Step2 />;
     } else if (formStepVal == 2) {
-      return <Step1 />;
+      return <Step3 />;
     }
 
     return <Step1 />;
